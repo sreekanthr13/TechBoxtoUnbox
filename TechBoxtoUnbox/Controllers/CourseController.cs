@@ -6,6 +6,7 @@ namespace TechBoxtoUnbox.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
     }
