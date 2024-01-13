@@ -66,5 +66,20 @@ No project was found. Change the current working directory or use the --project 
 
 Please execute as below way :
 dotnet ef database update --project G:\MyWork\New_Project\Code\API_Project\TechBoxtoUnbox\TechBoxtoUnbox\TechBoxtoUnbox.csproj
+----------------------------------------------------------------------------
+
+To create a new model :
+->Create a class with mandatory as [KEY] attribute property
+    ex: staff class having St_ID with [key] attribute
+
+->Add DBSet field in DBContext  file (our case: CourseContext.cs)
+    Ex: public DbSet<Staff> Staffs { get; set;}
+        in CourseContext.cs
+
+->Open "Package Manager Console" window
+    * Type command  :   add-migration "yourcomments like what you are doing"
+    * Type Command : update-database
+
+->By this your database suld get updated with your changes.
 
 

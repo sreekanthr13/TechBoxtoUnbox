@@ -13,6 +13,7 @@ namespace TechBoxtoUnbox.DataAccess
 
         // DbSet properties for your entities go here
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Staff> Staffs { get; set;}
         // Additional DbSet properties if needed
     }
 
