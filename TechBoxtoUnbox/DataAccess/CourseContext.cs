@@ -15,6 +15,7 @@ namespace TechBoxtoUnbox.DataAccess
         public DbSet<Course> Courses { get; set; }
         public DbSet<Staff> Staffs { get; set;}
         public DbSet<Student> Students { get; set; }
+
         // Additional DbSet properties if needed
     }
 
