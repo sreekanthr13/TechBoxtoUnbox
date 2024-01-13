@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechBoxtoUnbox.DataAccess;
 
@@ -11,9 +12,11 @@ using TechBoxtoUnbox.DataAccess;
 namespace TechBoxtoUnbox.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    partial class CourseContextModelSnapshot : ModelSnapshot
+    [Migration("20240113070045_updated_cfee_double_to_float")]
+    partial class updated_cfee_double_to_float
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,8 +33,8 @@ namespace TechBoxtoUnbox.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseId"));
 
-                    b.Property<double>("CFee")
-                        .HasColumnType("float");
+                    b.Property<float>("CFee")
+                        .HasColumnType("real");
 
                     b.Property<string>("CName")
                         .IsRequired()
