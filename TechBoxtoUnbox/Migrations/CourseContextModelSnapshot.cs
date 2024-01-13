@@ -30,8 +30,8 @@ namespace TechBoxtoUnbox.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseId"));
 
-                    b.Property<decimal>("CFee")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("CFee")
+                        .HasColumnType("float");
 
                     b.Property<string>("CName")
                         .IsRequired()

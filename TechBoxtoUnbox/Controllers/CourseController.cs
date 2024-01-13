@@ -6,7 +6,7 @@ namespace TechBoxtoUnbox.Controllers
     {
         public IActionResult Index()
         {
-            //Create api controller
+
             return View();
         }
     }
