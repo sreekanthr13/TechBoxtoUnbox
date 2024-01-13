@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechBoxtoUnbox.DataAccess;
 
@@ -11,9 +12,11 @@ using TechBoxtoUnbox.DataAccess;
 namespace TechBoxtoUnbox.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    partial class CourseContextModelSnapshot : ModelSnapshot
+    [Migration("20240113064636_staff_table_added")]
+    partial class staff_table_added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,8 +33,8 @@ namespace TechBoxtoUnbox.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseId"));
 
-                    b.Property<decimal>("CFee")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("CFee")
+                        .HasColumnType("float");
 
                     b.Property<string>("CName")
                         .IsRequired()
@@ -57,7 +60,7 @@ namespace TechBoxtoUnbox.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("St_DOE")
+                    b.Property<DateTime>("St_DOE")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("St_DOJ")
