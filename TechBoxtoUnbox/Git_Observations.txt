@@ -1,0 +1,9 @@
+﻿1)To get latest from master to our working branch:
+->Switch to local master branch
+->Pull the cahnges to your local master 
+[Make to sure to have no changes in your local master while pulling]
+
+->Switch to your our working branch.
+->Right click on the "Master branch" and click on "Merge into current branch" option.
+
+By the above we should able to get all the latest code of master branch to our working branch.
