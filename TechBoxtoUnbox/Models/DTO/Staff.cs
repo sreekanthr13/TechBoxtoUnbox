@@ -15,5 +15,7 @@ namespace TechBoxtoUnbox.Models.DTO
         public DateTime St_DOJ { get; set; }
 
         public DateTime? St_DOE { get; set; }
+
+        public ICollection<StaffCourses> Staffcourses { get; set; }
     }
 }
