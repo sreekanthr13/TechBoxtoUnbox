@@ -14,5 +14,7 @@ namespace TechBoxtoUnbox.Models.DTO
         public bool Student_Gneder { get; set; }
         public bool Student_Qualification { get;}
         public string? Student_Resume { get; set; }
+
+        public ICollection<StudentCourses> Studentcourses { get; set; }
     }
 }
