@@ -14,5 +14,8 @@ namespace TechBoxtoUnbox.Models.DTO
         public ICollection<StaffCourses> Staffcourses { get; set; }
 
         public ICollection<StudentCourses> Studentcourses { get; set; }
+
+        //------------------
+
     }
 }
